@@ -60,7 +60,42 @@
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
         <ul>
-          <li>Enter your JavaScript notes here.</li>
+          <li>A variable is a named container that allows us to store data in our code.</li>
+          <li>Control flow is the order in which a computer executes code in a script. Examples of control flows include:</li>
+          <ul>
+            <li>Conditionals - Such as <code>if</code> and <code>switch...case</code>.</li>
+            <li>Loops - Such as <code>for</code>, <code>while</code>, and <code>do...until</code>.</li>
+          </ul>
+          <li>Variable types:</li>
+          <ul>
+            <li><code>var</code> - The original, globally-scoped variable type. This means that any part of the code can access or modify the value contained. Not recommended in most cases for modern JS.</li>
+            <li><code>let</code> - Mutable, variable type, which allows for its data to be changed. Used when you need to be able to change the data type or contents of certain types like Strings and Numbers.</li>
+            <li><code>const</code> - (Mostly) immutable variable. Once created, the value (excepting in the case of the contents of arrays and objects) cannot be modified.</li>
+          </ul>
+          <li>As a rule of thumb, you should use <code>const</code> as often as possible, use <code>let</code> for variables that need to be able to change, and <code>var</code> only in situations where neither of the aformentioned are suitable.</li>
+          <li>Scope defines the range with which a variable can be accessed. There are three scopes - Global, Function, and Block</li>
+          <ul>
+            <li>Global - Variable can be accessed from anywhere within the script or file it's declared in. For example:</li>
+            <ul>
+              <li>Any variables declared anywhere outside any function or code block.</li>
+              <li>Any variable declared with <code>var</code>.</li>
+            </ul>
+            <li>Function - Variable can be accessed from anywhere within a function, or blocks within the function. For example:</li>
+            <ul>
+              <li>
+                A function called <code>toast()</code> with the variable <code>temperature</code>, can be used by any part of the code inside <code>toast()</code> but not in another function called <code>addBread()</code>.
+              </li>
+            </ul>
+            <li>Block - Variable can only be accessed from within the block of code it's running from, such as an <code>if</code> statement, or <code>for</code> loop. For example:</li>
+            <ul>
+              <li>A variable in a <code>for</code> loop called <code>i</code>, which is used to track the steps, can't be used by the function it's contained in.</li>
+            </ul>
+          </ul>
+          <li>Variables in a given scope can be accessed by functions or code blocks nested under them in the hierarchy (Global &gt; Function &gt; Block). These capabilities are referred to as Closures.</li>
+          <ul>
+            <li>The process of accessing a value in Closure is known as Hoisting.</li>
+          </ul>
+          <li>Unlike CSS, which should be declared as early in the document flow as possible (in the <code>head</code>), <code>script</code> tags should be declared in the <code>body</code> at the end. This allows the DOM time to load in so code such as event listeners can be registered successfully.</li>
         </ul>
       </section>
     </main>
